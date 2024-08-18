@@ -1,0 +1,12 @@
+  [
+    {
+        "email": "hadeel@gmail.com",
+        "password": "123",
+        "role": "user"
+    },
+    {
+        "email": "hadeelzoubi@anamel.com",
+        "password": "111",
+        "role": "admin"
+    }
+]

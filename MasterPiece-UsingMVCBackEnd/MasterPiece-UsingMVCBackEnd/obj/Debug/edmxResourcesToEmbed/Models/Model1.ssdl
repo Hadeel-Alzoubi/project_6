@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MasterPieceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="pass" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="adress" Type="nvarchar(max)" />
+    <Property Name="phoneNo" Type="int" />
+  </EntityType>
+  <EntityType Name="cart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="varchar" MaxLength="50" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="img" Type="nvarchar(max)" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="price" Type="int" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="img" Type="varchar(max)" />
+    <Property Name="desc" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="category_id" Type="int" />
+  </EntityType>
+  <EntityType Name="product_list">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="price" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="img" Type="nvarchar(max)" />
+    <Property Name="category_id" Type="int" />
+    <Property Name="sales_count" Type="int" />
+    <Property Name="popularity" Type="int" />
+    <Property Name="date_added" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="user_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="pass" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="adress" Type="nvarchar(max)" />
+    <Property Name="phoneNo" Type="int" />
+  </EntityType>
+  <EntityContainer Name="MasterPieceModelStoreContainer">
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cart" EntityType="Self.cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_list" EntityType="Self.product_list" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user_" EntityType="Self.user_" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

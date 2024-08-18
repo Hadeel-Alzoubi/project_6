@@ -1,0 +1,305 @@
+﻿
+    <!-- Product List Start -->
+    <div class="product-view">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="product-view-top">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="product-short">
+                                            <div class="dropdown">
+                                                <div class="dropdown-toggle" data-toggle="dropdown">ترتيب المنتجات حسب</div>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                                    <a href="@Url.Action("sort", new { sortOrder = "mostRecent" })" class="dropdown-item">الاحدث</a>
+                                                    <a href="@Url.Action("sort", new { sortOrder = "mostPopular" })" class="dropdown-item">الاشهر</a>
+                                                    <a href="@Url.Action("sort", new { sortOrder = "bestSelling" })" class="dropdown-item">الاكثر مبيعا</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item" >
+                                <div class="product-title">
+                                    <a href="#">ساعة حائط</a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                       
+                                        <img src="~/Content/img/1655165208_Title(1).jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail6.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>20 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطلبها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">سنسال </a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src="~/Content/img/images (3).jfif" alt="Product Image" height="269.99px">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail3.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>5 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطلبها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">طاولة</a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src=" ~/Content/img/table1.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail3.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>50 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطليها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">قطعة مميزة للمنزل</a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src=" ~/Content/img/home.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail3.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>4 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطلبها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">فاصل كتاب</a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src=" ~/Content/img/bookmark.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail3.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>7 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطلبها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">مجموعة مميزة للتقديم</a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src=" ~/Content/img/homehome.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail3.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>50 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطلبها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">حامل مصحف</a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src=" ~/Content/img/qu.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail3.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>25 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطلبها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">مدالية </a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src=" ~/Content/img/accc.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail3.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>5 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطلبها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">قطع مميزة للبيت</a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src=" ~/Content/img/homehome.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        <a onclick="addToCart()"><i class="fa fa-cart-plus"></i></a>
+                                        <a onclick="addToWishlist()"><i class="fa fa-heart"></i></a>
+                                        <a href="product-detail3.html"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3>12 JD</h3>
+                                    <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اطلبها الان</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination Start -->
+                    <div class="col-md-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">قبل</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">بعد</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Pagination Start -->
+                </div>
+
+                <!-- Side Bar Start -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Product List End -->

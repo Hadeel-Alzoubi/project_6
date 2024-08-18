@@ -1,0 +1,39 @@
+﻿@model MasterPiece_UsingMVCBackEnd.Models.user_
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="login">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="login-form" style="text-align: right;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>الايميل</label>
+                                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-6">
+                                    <label>كلمة السر</label>
+                                    @Html.EditorFor(model => model.pass, new { htmlAttributes = new { @class = "form-control", type = "password" } })
+                                    @Html.ValidationMessageFor(model => model.pass, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="newaccount">
+                                        <label class="custom-control-label" for="newaccount">تذكرني</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn">تسجيل الدخول</button>
+                                </div>
+                                <a href="~/Views/Home/register.cshtml">ليس لدي حساب تسجيل الاشتراك</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }

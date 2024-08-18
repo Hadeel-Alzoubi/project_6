@@ -1,0 +1,109 @@
+﻿@model IEnumerable<MasterPiece_UsingMVCBackEnd.Models.cart>
+
+<div class="cart-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart-page-inner">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>المنتج</th>
+                                    <th>السعر</th>
+                                    <th>الكمية</th>
+                                    <th>المجموع</th>
+                                    <th>حذف</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="img">
+                                                <a href="#"><img src="~/img/@item.img" alt="Image"  width="50px"></a>
+                                                <p>@item.name</p>
+                                            </div>
+                                        </td>
+                                        <td>@item.price JD</td>
+                                        <td>
+                                            <div class="qty">
+                                                <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                <input type="text" value="@item.quantity">
+                                                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>@(item.price * item.quantity) JD</td>
+                                        <td><button onclick="location.href='@Url.Action("RemoveFromCart", new { id = item.id })'"><i class="fa fa-trash"></i></button></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart-page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="cart-summary">
+                                <div class="cart-content">
+                                    <h1>تفاصيل الاسعار</h1>
+                                    <p>السعر الجزئي<span>@Model.Sum(item => item.price * item.quantity) JD</span></p>
+                                    <p>سعر التوصيل<span>00</span></p>
+                                    <h2>المجموع<span>@Model.Sum(item => item.price * item.quantity) JD</span></h2>
+                                </div>
+                                <div class="cart-btn">
+                                    <a href="checkout.html"><button>اتمام عملية الشراء</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.btn-plus').click(function () {
+            var itemId = $(this).data('item-id');
+            var input = $(this).siblings('input');
+            var newQuantity = parseInt(input.val()) + 1;
+
+            $.post('/YourController/UpdateQuantity', { id: itemId, quantity: newQuantity }, function (response) {
+                if (response.success) {
+                    input.val(newQuantity);
+                    $('tr[data-id="' + itemId + '"] .item-total').text(response.total + " JD");
+                    updateCartTotal(); // قم بتحديث المجموع الكلي للسلة
+                }
+            });
+        });
+
+        $('.btn-minus').click(function () {
+            var itemId = $(this).data('item-id');
+            var input = $(this).siblings('input');
+            var newQuantity = parseInt(input.val()) - 1;
+
+            if (newQuantity > 0) {
+                $.post('/YourController/UpdateQuantity', { id: itemId, quantity: newQuantity }, function (response) {
+                    if (response.success) {
+                        input.val(newQuantity);
+                        $('tr[data-id="' + itemId + '"] .item-total').text(response.total + " JD");
+                        updateCartTotal(); // قم بتحديث المجموع الكلي للسلة
+                    }
+                });
+            }
+        });
+
+        function updateCartTotal() {
+            var total = 0;
+            $('.item-total').each(function () {
+                total += parseFloat($(this).text());
+            });
+            $('#cart-total').text(total + " JD");
+        }
+    });
+
+</script>

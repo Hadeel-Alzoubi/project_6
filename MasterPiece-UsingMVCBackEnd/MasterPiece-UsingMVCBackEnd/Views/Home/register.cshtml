@@ -1,0 +1,54 @@
+﻿@model MasterPiece_UsingMVCBackEnd.Models.user_
+
+    <!-- Login Start -->
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="login" style="text-align:right;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="register-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>الاسم </label>
+                                    @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                </div>
+                                @*<div class="col-md-6">
+                                        <label>الاسم الاخير</label>
+                                        <input class="form-control" type="text" placeholder="الاسم الاخير">
+                                    </div>*@
+                                <div class="col-md-6">
+                                    <label>الايميل</label>
+                                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-6">
+                                    <label>رقم الهاتف</label>
+                                    @Html.EditorFor(model => model.phoneNo, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.phoneNo, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-6">
+                                    <label>كلمة السر</label>
+                                    @Html.EditorFor(model => model.pass, new { htmlAttributes = new { @class = "form-control", type = "password" } })
+                                    @Html.ValidationMessageFor(model => model.pass, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-6">
+                                    <label>اعد كتابة كلمة السر</label>
+                                    <input class="form-control" type="password" placeholder="">
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn">تسجيل</button>
+                                </div>
+                                <a href="~/Views/Home/login.cshtml">لدي حساب بالفعل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }

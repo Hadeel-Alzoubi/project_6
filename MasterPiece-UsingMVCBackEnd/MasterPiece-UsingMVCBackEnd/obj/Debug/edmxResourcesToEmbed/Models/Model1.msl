@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MasterPieceModelStoreContainer" CdmEntityContainer="MasterPieceEntities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="MasterPieceModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="carts">
+      <EntityTypeMapping TypeName="MasterPieceModel.cart">
+        <MappingFragment StoreEntitySet="cart">
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="MasterPieceModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_list">
+      <EntityTypeMapping TypeName="MasterPieceModel.product_list">
+        <MappingFragment StoreEntitySet="product_list">
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="popularity" ColumnName="popularity" />
+          <ScalarProperty Name="sales_count" ColumnName="sales_count" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="img" ColumnName="img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_">
+      <EntityTypeMapping TypeName="MasterPieceModel.user_">
+        <MappingFragment StoreEntitySet="user_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedbacks">
+      <EntityTypeMapping TypeName="MasterPieceModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

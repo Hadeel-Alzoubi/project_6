@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>Anamel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="eCommerce HTML Template Free Download" name="keywords">
+    <meta content="eCommerce HTML Template Free Download" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/Content/lib/slick/slick.css" rel="stylesheet">
+    <link href="~/Content/lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/Content/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top bar Start -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <i class="fa fa-envelope"></i>
+                    anamel@email.com
+                </div>
+                <div class="col-sm-6">
+                    <i class="fa fa-phone-alt"></i>
+                    +012-345-6789
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top bar End -->
+    <!-- Nav Bar Start -->
+    <div class="nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="~/Views/Home/homepage.cshtml" class="nav-item nav-link active">الرئيسية</a>
+                        <a href="#cate" class="nav-item nav-link ">الاصناف</a>
+                        <!-- <a href="my-account.html" class="nav-item nav-link">حسابي</a> هاي الداش بورد لليوزر و الادمن-->
+                        <a href="aboutus.html" class="nav-item nav-link">عن أنامل</a>
+                        <a href="~/Views/Home/homepage.cshtml" class="nav-item nav-link" style="display: none;" id="logout">تسجيل الخروج</a>
+                    </div>
+
+                    <div class="navbar-nav ml-auto">
+                        <div class="nav-item dropdown" style="display: inline;" id="in">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">حسابي</a>
+                            <div class="dropdown-menu">
+                                <a href="~/Views/Home/login.cshtml" class="dropdown-item">تسجيل الدخول</a>
+                                <a href="~/Views/Home/register.cshtml" class="dropdown-item">تسجيل اشتراك</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="dropdown-item">تواصل معنا</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    <!-- Bottom Bar Start -->
+    <div class="bottom-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="~/Views/Home/homepage.cshtml">
+                            <img src="~/Content/img/logo-Photoroom.png" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="user">
+                        <a href="wishlist.html" class="btn wishlist">
+                            <i class="fa fa-heart"></i>
+                            <span></span>
+                        </a>
+                        <a href="cart.html" class="btn cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Bar End -->
+    <!-- Product Detail End -->
+    <div class="product-detail" style="direction: rtl;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="product-detail-top">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <div class=" normal-slider">
+                                    <img src="~/Content/img/836ef58e-3508-4690-8a34-5e53828a77e2-1-11.jpg" alt="Product Image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <div class="title"><h2>اكسسوار حلق من الخرز</h2></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="price">
+                                        <h4>السعر:</h4>
+                                        <p>2.5 JD </p>
+                                    </div>
+                                    <div class="quantity">
+                                        <h4>الكمية:</h4>
+                                        <div class="qty">
+                                            <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                            <input type="text" value="1">
+                                            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="action">
+                                        <a class="btn" onclick="addToCart()"><i class="fa fa-shopping-cart"></i>اضف الى عربة التسوق</a>
+                                        <a class="btn" onclick="addToWishlist()"><i class="fa fa-heart"></i>اضف الى المفضلة</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row product-detail-bottom">
+                        <div class="col-lg-12">
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#description">وصف المنتج</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#specification">عن التاجر</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#reviews">تعليقات</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" style="text-align: right;">
+                                <div id="description" class="container tab-pane active">
+                                    <h4>وصف المنتج</h4>
+                                    <p>
+                                        أضف لمسة من الأناقة والتميّز إلى إطلالتك مع هذا الحلق الرائع المصنوع من الخرز. يجمع بين الحرفية العالية والتصميم العصري، ليقدم لك قطعة فريدة تعزز من جمالك وتضيف لمسة من التألق.
+                                    </p>
+                                </div>
+                                <div id="specification" class="container tab-pane ">
+                                    <h4>معلومات عن التاجر </h4>
+                                    <p>
+                                    <p>
+                                        أعمل كتاجر متخصص في صناعة وتجارة الخرز المصنوع يدويا، بدأت رحلتي في عالم الخرز المصنوع بحب وشغف للتصميم، مما دفعني لتطوير مهاراتي وإطلاق مشروعي الخاص بي
+                                        <h4> الرؤية المستقبلية</h4>
+                                        أسعى دائمًا للتطوير والتوسع في عملي، وأطمح لتقديم المزيد من المنتجات المبتكرة والخدمات المميزة لعملائي. أهدف إلى تعزيز وجودي في الأسواق المحلية والدولية وبناء علاقات طويلة الأمد مع العملاء مبنية على الثقة والجودة..
+                                    </p>
+                                    </p>
+                                </div>
+                                <div id="reviews" class="container tab-pane fade">
+                                    <div class="reviews-submitted">
+                                        <div class="reviewer">مريم <span>01 Jan 2020</span></div>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <p>
+                                            قطعة جميلة جدا
+                                        </p>
+                                    </div>
+                                    <div class="reviews-submit">
+                                        <h4>شاركنا رأيك بالمنتج:</h4>
+                                        <div class="ratting">
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <div class="row form">
+                                            <div class="col-sm-6">
+                                                <input type="text" placeholder="الاسم">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="email" placeholder="الايميل">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <textarea placeholder="التعليق"></textarea>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <button>ارسل التعليق</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="text-align: right; direction: ltr;">
+                        <div class="section-header">
+                            <h1>منتجات ذات صلة</h1>
+                        </div>
+
+                        <div class="row align-items-center product-slider product-slider-3">
+                            <div class="col-lg-3">
+                                <div class="product-item">
+                                    <div class="product-title">
+                                        <a href="#">سنسال</a>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-image">
+                                        <a href="product-detail.html">
+                                            <img src="~/Content/img/channels4_profile.jpg" alt="Product Image">
+                                        </a>
+                                    </div>
+                                    <div class="product-price" style="display: flex; justify-content: center; gap: 10px;">
+                                        <h3>7 JD</h3>
+                                        <a class="btn" onclick="addToWishlist()" style="width: fit-content ;"><i class="fa fa-heart"></i></a>
+                                        <a class="btn" onclick="addToCart()" style="width: fit-content ;"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="product-item">
+                                    <div class="product-title">
+                                        <a href="#">دبوس من الخرز</a>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-image">
+                                        <a href="product-detail.html">
+                                            <img src="~/Content/img/b136282f5f8390fcbc43bc510d870100_1024x1024.webp" alt="Product Image">
+                                        </a>
+                                    </div>
+                                    <div class="product-price" style=" display: flex; justify-content: center; gap: 10px;">
+                                        <h3>10 JD</h3>
+                                        <a class="btn" onclick="addToWishlist()" style="width: fit-content ;"><i class="fa fa-heart"></i></a>
+                                        <a class="btn" onclick="addToCart()" style="width: fit-content ;"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="product-item">
+                                    <div class="product-title">
+                                        <a href="#">حقيبة من الخرز </a>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-image">
+                                        <a href="product-detail.html">
+                                            <img src="~/Content/img/bag-bag.jpg" alt="Product Image">
+                                        </a>
+                                    </div>
+                                    <div class="product-price" style=" display: flex; justify-content: center; gap: 10px;">
+                                        <h3>25 JD</h3>
+                                        <a class="btn" onclick="addToWishlist()" style="width: fit-content ;"><i class="fa fa-heart"></i></a>
+                                        <a class="btn" onclick="addToCart()" style="width: fit-content ;"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="product-item">
+                                    <div class="product-title">
+                                        <a href="#"> للسيارة </a>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-image">
+                                        <a href="product-detail.html">
+                                            <img src="~/Content/img/car.jpg" alt="Product Image">
+                                        </a>
+                                    
+                                    </div>
+                                    <div class="product-price" style=" display: flex; justify-content: center; gap: 10px;">
+                                        <h3>10 JD</h3>
+                                        <a class="btn" onclick="addToWishlist()" style="width: fit-content ;"><i class="fa fa-heart"></i></a>
+                                        <a class="btn" onclick="addToCart()" style="width: fit-content ;"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="product-item">
+                                    <div class="product-title">
+                                        <a href="#">قطعة مميزة للمنزل</a>
+                                        <div class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-image">
+                                        <a href="product-detail.html">
+                                            <img src="~/Content/img/2-8-500x500.jpg" alt="Product Image">
+                                        </a>
+                                    </div>
+                                    <div class="product-price" style=" display: flex; justify-content: center; gap: 10px;">
+                                        <h3>7 JD</h3>
+                                        <a class="btn" onclick="addToWishlist()" style="width: fit-content ;"><i class="fa fa-heart"></i></a>
+                                        <a class="btn" onclick="addToCart()" style="width: fit-content ;"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured Product End -->
+    <!-- Newsletter Start -->
+    <div class="newsletter">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>تابع معنا اخر التحديثات</h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="form">
+                        <input type="email" placeholder="Email" style="direction: ltr;">
+                        <button>إرسال</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter End -->
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>ابق على تواصل معنا</h2>
+                        <div class="contact-info">
+                            <!-- <p><i class="fa fa-map-marker"></i>123 E Store, Los Angeles, USA</p> -->
+                            <p>anamel@gmail.com<i class="fa fa-envelope"></i></p>
+                            <p>+123-456-7890<i class="fa fa-phone"></i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>تابعنا</h2>
+                        <div class="contact-info">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <!-- <h2>أنامل</h2> -->
+                        <ul>
+                            <li><a href="aboutus.html">عن أنامل</a></li>
+                            <li><a href="PrivacyPolicy.html">سياسة الخصوصية</a></li>
+                            <li><a href="Terms.html">الشروط والأحكام</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- <div class="col-md-3"> -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo-Photoroom.png" alt="Logo" style="width: 150px !important;">
+                        </a>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Footer Bottom Start -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 copyright">
+                    <p>Copyright &copy; <a href="anamel@gmail.com">Anamel</a>. All Rights Reserved</p>
+                </div>
+
+                <div class="col-md-6 template-by">
+                    <p>Template By <a href="anamel@gmail.com">anamel@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Bottom End -->
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <script>
+            function addToCart() {
+                if (localStorage.getItem('loggedIn')) {
+                    alert('تمت الإضافة إلى السلة بنجاح');
+                    window.location.href = '#';
+                } else {
+                    alert('يرجى تسجيل الدخول لإضافة منتجات إلى السلة');
+                    window.location.href = 'login.html';
+                }
+            }
+
+            function addToWishlist() {
+                if (localStorage.getItem('loggedIn')) {
+                    alert('تمت الإضافة إلى المفضلة بنجاح');
+                    window.location.href = '#';
+                } else {
+                    alert('يرجى تسجيل الدخول لإضافة منتجات إلى المفضلة');
+                    window.location.href = 'login.html';
+                }
+            }
+    </script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="auth.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

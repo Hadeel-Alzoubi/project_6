@@ -1,0 +1,77 @@
+﻿@model MasterPiece_UsingMVCBackEnd.Models.user_
+
+<div class="my-account" style="text-align: right;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                    <!-- Account button -->
+                    <a class="nav-link" href="@Url.Action("Profile", "Home", new { showAccountForm = true })" role="tab"><i class="fa fa-user"></i> حسابي</a>
+                </div>
+            </div>
+
+
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <!-- The rest of your form goes here -->
+                        @using (Html.BeginForm("Profile", "Home", FormMethod.Post))
+                        {
+                            @Html.HiddenFor(model => model.id) <!-- Hidden field to include the id in the form submission -->
+
+                            <div class="tab-pane fade show active" id="account-tab" role="tabpanel" aria-labelledby="account-nav">
+                                <h4>التواصل</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label> الاسم</label>
+                                        @Html.TextBoxFor(model => model.name, new { @class = "form-control", placeholder = "الاسم" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>رقم الهاتف</label>
+                                        @Html.TextBoxFor(model => model.phoneNo, new { @class = "form-control", placeholder = "رقم الهاتف" })
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>الايميل</label>
+                                        @Html.TextBoxFor(model => model.email, new { @class = "form-control", placeholder = "example@gmail.com" })
+                                    </div>
+                                </div>
+
+                                <h4>معلومات التوصيل</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label> تفصيل الموقع</label>
+                                        @Html.TextBoxFor(model => model.adress, new { @class = "form-control", placeholder = "المنطقة" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>المنطقة</label>
+                                        @Html.TextBox("neighborhood", null, new { @class = "form-control", placeholder = "الحي" })
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>الحي</label>
+                                        @Html.TextBox("locationDetails", null, new { @class = "form-control", placeholder = "تفصيل الموقع" })
+                                    </div>
+                                </div>
+
+                                <h4>تغيير كلمة السر</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @Html.Password("currentPassword", null, new { @class = "form-control", placeholder = "كلمة السر الحالية" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.PasswordFor(model => model.pass, new { @class = "form-control", placeholder = "كلمة السر الجديدة" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="password" placeholder="تاكيد كلمة السر" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn">حفظ المعلومات</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
